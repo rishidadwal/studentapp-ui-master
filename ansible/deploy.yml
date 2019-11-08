@@ -1,0 +1,29 @@
+- name: Deploy war file 
+  hosts: all
+  become: yes 
+  vars:
+    TOMCAT_LOC: "/home/student/apache-tomcat-8.5.45/"
+  tasks:
+    - name: Stop tomcat 
+      service:
+        name: tomcat 
+        state: stopped
+
+    - name: Remove old war file 
+      file:
+        path: "{{TOMCAT_LOC}}/webapps/{{item}}"
+        state: absent 
+      loop:
+        - student 
+        - student.war 
+
+    - name: Copy the new war file 
+      copy:
+        src: student.war 
+        dest: "{{TOMCAT_LOC}}/webapps/student.war"
+      become_user: student 
+    
+    - name: Start Tomcat 
+      service:
+        name: tomcat 
+        state: started
