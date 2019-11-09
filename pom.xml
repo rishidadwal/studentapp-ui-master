@@ -37,7 +37,7 @@
         <repository>
             <id>deployment</id>
             <name>Internal Releases</name>
-            <url>http://nexus-d40.devopsproj.com:8081/repository/studentapp-ui-releases/</url>
+            <url>http://54.234.217.122:8081/repository/studentapp-ui-releases/</url>
         </repository>
         <snapshotRepository>
             <id>deployment</id>
