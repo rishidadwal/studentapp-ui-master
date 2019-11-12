@@ -2,13 +2,13 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.jdevs</groupId>
   <artifactId>studentapp</artifactId>
-  <version>2.2-SNAPSHOT</version>
+  <version>3.0.2-SNAPSHOT</version>
   <packaging>war</packaging>
 
   <scm>
-   <connection>scm:git@github.com:rishidadwal/studentapp-ui-master.git</connection>
-   <url>https://git@github.com:rishidadwal/studentapp-ui-master.git</url>
-   <developerConnection>scm:git@github.com:rishidadwal/studentapp-ui-master.git</developerConnection>
+   <connection>scm:git:https://${GIT_USR}:${GIT_PSW}@gitlab.com/d41/studentapp-ui.git</connection>
+   <url>scm:git:https://${GIT_USR}:${GIT_PSW}@gitlab.com/d41/studentapp-ui.git</url>
+   <developerConnection>scm:git:https://${GIT_USR}:${GIT_PSW}@gitlab.com/d41/studentapp-ui.git</developerConnection>
     <tag>studentapp-1.0</tag>
   </scm>   
 
@@ -37,12 +37,12 @@
         <repository>
             <id>deployment</id>
             <name>Internal Releases</name>
-            <url>http://54.173.74.97:8081/repository/studentapp-ui-releases/</url>
+            <url>http://nexus.devopsb41.tk:8081/repository/studentapp-ui-releases/</url>
         </repository>
         <snapshotRepository>
             <id>deployment</id>
             <name>Internal Snapshot Releases</name>
-            <url>http://54.173.74.97:8081/repository/studentapp-ui-snapshots/</url>
+            <url>http://nexus.devopsb41.tk:8081/repository/studentapp-ui-snapshots/</url>
         </snapshotRepository>
     </distributionManagement>
   <dependencies>
